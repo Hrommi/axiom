@@ -6,9 +6,17 @@
 
   $block-name:                &; // #{$block-name}__element
 
-  padding: 14px 24px 14px 16px;
-  background: $color-main;
+  padding: 14px 16px;
+  background-color: $color-main;
   color: $text-color--invert;
+
+  &--header {
+    padding-right: 24px;
+  }
+
+  &--transparent {
+    background-color: transparent;
+  }
 
   &__inner {
     display: flex;

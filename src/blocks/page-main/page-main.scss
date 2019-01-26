@@ -10,5 +10,19 @@
 
   &__inner {
     display: flex;
+    align-items: flex-start;
+  }
+
+  &__item {
+    flex-grow: 1;
+
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+
+    &--detail {
+      flex: 0 0 430px;
+      max-width: 430px;
+    }
   }
 }

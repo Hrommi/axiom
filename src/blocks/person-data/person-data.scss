@@ -1,0 +1,38 @@
+// В этом файле должны быть стили для БЭМ-блока person-data, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.person-data {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: block;
+  padding: 8px 12px 8px 0;
+  text-decoration: none;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 44px;
+  }
+
+  &__content {
+    flex-grow: 1;
+    max-width: 220px;
+  }
+
+  &__title {
+    font-size: $font-size--large;
+    color: $text-color;
+  }
+
+  &__hint {
+    font-size: $font-size--small;
+    color: $text-color--muted;
+  }
+
+  &__more {
+    margin-left: 16px;
+  }
+}

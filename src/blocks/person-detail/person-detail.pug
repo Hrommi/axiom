@@ -1,0 +1,22 @@
+//- Все примеси в этом файле должны начинаться c имени блока (person-detail)
+
+mixin person-detail(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +person-detail('some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' person-detail--' + modsList[i].trim();
+      }
+    }
+
+  .person-detail(class=allMods)&attributes(attributes)
+    .person-detail__inner
+      block

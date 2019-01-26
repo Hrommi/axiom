@@ -1,0 +1,112 @@
+//- Все примеси в этом файле должны начинаться c имени блока (person-data)
+
+mixin person-data(mods, href)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //-   href    {string} - ссылка
+  //- Вызов:
+        +person-data('some-mod', true)
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' person-data--' + modsList[i].trim();
+      }
+    }
+
+  if (href)
+    a.person-data(class=allMods, href=href)&attributes(attributes)
+      .person-data__inner
+        block
+  else
+    .person-data(class=allMods)&attributes(attributes)
+      .person-data__inner
+        block
+
+
+mixin person-data_content(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +person-data_content('some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' person-data--' + modsList[i].trim();
+      }
+    }
+
+  .person-data__content(class=allMods)&attributes(attributes)
+    block
+
+
+mixin person-data_title(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +person-data_title('some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' person-data--' + modsList[i].trim();
+      }
+    }
+
+  .person-data__title(class=allMods)&attributes(attributes)
+    block
+
+
+mixin person-data_hint(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +person-data_hint('some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' person-data--' + modsList[i].trim();
+      }
+    }
+
+  .person-data__hint(class=allMods)&attributes(attributes)
+    block
+
+
+mixin person-data_more(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +person-data_more('some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' person-data--' + modsList[i].trim();
+      }
+    }
+
+  .person-data__more(class=allMods)&attributes(attributes)
+    block

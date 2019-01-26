@@ -147,7 +147,7 @@ img {
   height: auto;
 }
 
-a {
+a:not([class]) {
   color: $link-color;
   background-color: transparent;
   transition: color 0.3s;

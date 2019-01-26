@@ -6,9 +6,13 @@
 
   $block-name:                &; // #{$block-name}__element
 
-  flex-grow: 1;
   overflow: auto;
   max-height: calc(100vh - 100px);
+  border-radius: $border-radius;
   background-color: $element-bg;
   box-shadow: $shadow;
+
+  &__item {
+    flex-grow: 1;
+  }
 }

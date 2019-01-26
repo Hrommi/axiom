@@ -1,0 +1,21 @@
+// В этом файле должны быть стили для БЭМ-блока person-detail, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.person-detail {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__header {
+    background-color: $gray-dark;
+    background-position: center center;
+    background-size: cover;
+    color: $text-color--invert;
+  }
+
+  &__name {
+    padding: 28% 26px 10px 26px;
+    font-size: $font-size--h1;
+    letter-spacing: -0.025em;
+  }
+}
