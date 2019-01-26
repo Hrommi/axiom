@@ -1,0 +1,39 @@
+// В этом файле должны быть стили для БЭМ-блока person-list, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.person-list {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+    padding: 6px 0;
+  }
+
+  &__group {
+    display: flex;
+    align-items: flex-start;
+    padding: 0 0 0 26px;
+  }
+
+  &__note {
+    flex: 0 0 20px;
+    max-width: 20px;
+    margin: 20px 36px 20px 0;
+    font-size: 24px;
+    color: $color-secondary;
+    text-align: center;
+    cursor: default;
+  }
+
+  &__list {
+    flex-grow: 1;
+    list-style: none;
+    margin: 0;
+    padding: 6px 0;
+
+    #{$block-name}__group:not(:last-child) & {
+      border-bottom: 1px solid $border-color;
+    }
+  }
+}

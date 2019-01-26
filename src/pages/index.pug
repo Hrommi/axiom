@@ -25,7 +25,96 @@ block header
             use(xlink:href="img/sprite.svg#more")
 
 block content
-  h1 Заголовок
+  +page-main()(class="page__main")
+    +person-block()
+      +person-list()
+        +person-list_group()
+          +person-list_note()
+            svg(width="20", height="20")
+              use(xlink:href="img/sprite.svg#star")
+          - var personStar = [ { name: 'Carolyn Campbell', src: 'img/avatar-1.jpg', src2x: 'img/avatar-1@2x.jpg' }, { name: 'Jennifer Carpenter', src: 'img/avatar-2.jpg', src2x: 'img/avatar-2@2x.jpg' }, { name: 'James Connors', src: 'img/avatar-3.jpg', src2x: 'img/avatar-3@2x.jpg' }, { name: 'Beverly Harris', src: 'img/avatar-4.jpg', src2x: 'img/avatar-4@2x.jpg' } ];
+          +person-list_list()
+            each person in personStar
+              +person-list_item()
+                +person()
+                  +person_avatar()
+                    +avatar(person.src, person.src2x)
+                  +person_name()
+                    = person.name
+        +person-list_group()
+          +person-list_note()
+            | A
+          - var personA = [ { name: 'Brittany Delgado', src: 'img/avatar-5.jpg', src2x: 'img/avatar-5@2x.jpg' }, { name: 'Wayne Ray', src: 'img/avatar-6.jpg', src2x: 'img/avatar-6@2x.jpg' }, { name: 'Rachel Ross', src: 'img/avatar-1.jpg', src2x: 'img/avatar-1@2x.jpg' }, { name: 'Bruce Morales', src: 'img/avatar-2.jpg', src2x: 'img/avatar-2@2x.jpg' }, { name: 'Evelyn Morales', src: 'img/avatar-3.jpg', src2x: 'img/avatar-3@2x.jpg' }, { name: 'Marie Fuller', src: 'img/avatar-4.jpg', src2x: 'img/avatar-4@2x.jpg' } ];
+          +person-list_list()
+            each person in personA
+              +person-list_item()
+                +person()
+                  +person_avatar()
+                    +avatar(person.src, person.src2x)
+                  +person_name()
+                    = person.name
+        +person-list_group()
+          +person-list_note()
+            | B
+          - var personB = [ { name: 'Gregory Burton', src: 'img/avatar-1.jpg', src2x: 'img/avatar-1@2x.jpg' }, { name: 'Beverly Armstrong', src: 'img/avatar-2.jpg', src2x: 'img/avatar-2@2x.jpg' }, { name: 'Brittany Delgado', src: 'img/avatar-3.jpg', src2x: 'img/avatar-3@2x.jpg' }, { name: 'Carolyn Campbell', src: 'img/avatar-4.jpg', src2x: 'img/avatar-4@2x.jpg' } ];
+          +person-list_list()
+            each person in personB
+              +person-list_item()
+                +person()
+                  +person_avatar()
+                    +avatar(person.src, person.src2x)
+                  +person_name()
+                    = person.name
+        +person-list_group()
+          +person-list_note()
+            | C
+          - var personC = [ { name: 'Gregory Burton', src: 'img/avatar-1.jpg', src2x: 'img/avatar-1@2x.jpg' }, { name: 'Beverly Armstrong', src: 'img/avatar-2.jpg', src2x: 'img/avatar-2@2x.jpg' }, { name: 'Brittany Delgado', src: 'img/avatar-3.jpg', src2x: 'img/avatar-3@2x.jpg' }, { name: 'Carolyn Campbell', src: 'img/avatar-4.jpg', src2x: 'img/avatar-4@2x.jpg' } ];
+          +person-list_list()
+            each person in personC
+              +person-list_item()
+                +person()
+                  +person_avatar()
+                    +avatar(person.src, person.src2x)
+                  +person_name()
+                    = person.name
+        +person-list_group()
+          +person-list_note()
+            | D
+          - var personD = [ { name: 'Gregory Burton', src: 'img/avatar-1.jpg', src2x: 'img/avatar-1@2x.jpg' }, { name: 'Beverly Armstrong', src: 'img/avatar-2.jpg', src2x: 'img/avatar-2@2x.jpg' }, { name: 'Brittany Delgado', src: 'img/avatar-3.jpg', src2x: 'img/avatar-3@2x.jpg' }, { name: 'Carolyn Campbell', src: 'img/avatar-4.jpg', src2x: 'img/avatar-4@2x.jpg' } ];
+          +person-list_list()
+            each person in personD
+              +person-list_item()
+                +person()
+                  +person_avatar()
+                    +avatar(person.src, person.src2x)
+                  +person_name()
+                    = person.name
+        +person-list_group()
+          +person-list_note()
+            | E
+          - var personE = [ { name: 'Gregory Burton', src: 'img/avatar-1.jpg', src2x: 'img/avatar-1@2x.jpg' }, { name: 'Beverly Armstrong', src: 'img/avatar-2.jpg', src2x: 'img/avatar-2@2x.jpg' }, { name: 'Brittany Delgado', src: 'img/avatar-3.jpg', src2x: 'img/avatar-3@2x.jpg' }, { name: 'Carolyn Campbell', src: 'img/avatar-4.jpg', src2x: 'img/avatar-4@2x.jpg' } ];
+          +person-list_list()
+            each person in personE
+              +person-list_item()
+                +person()
+                  +person_avatar()
+                    +avatar(person.src, person.src2x)
+                  +person_name()
+                    = person.name
+        +person-list_group()
+          +person-list_note()
+            | Z
+          - var personZ = [ { name: 'Gregory Burton', src: 'img/avatar-1.jpg', src2x: 'img/avatar-1@2x.jpg' }, { name: 'Beverly Armstrong', src: 'img/avatar-2.jpg', src2x: 'img/avatar-2@2x.jpg' }, { name: 'Brittany Delgado', src: 'img/avatar-3.jpg', src2x: 'img/avatar-3@2x.jpg' }, { name: 'Carolyn Campbell', src: 'img/avatar-4.jpg', src2x: 'img/avatar-4@2x.jpg' } ];
+          +person-list_list()
+            each person in personZ
+              +person-list_item()
+                +person()
+                  +person_avatar()
+                    +avatar(person.src, person.src2x)
+                  +person_name()
+                    = person.name
+          - var end;
+
 
 block footer
   +page-footer()

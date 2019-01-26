@@ -1,0 +1,23 @@
+//- Все примеси в этом файле должны начинаться c имени блока (avatar)
+
+mixin avatar(src, src2x, mods)
+
+  //- Принимает:
+  //-   src     {string} - ссылка
+  //-   src2x   {string} - ссылка
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +avatar('/img/avatar.jpg', '/img/avatar@2x.jpg 2x', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' avatar--' + modsList[i].trim();
+      }
+    }
+
+  .avatar(class=allMods)&attributes(attributes)
+    img(src=src, srcset=src2x, class="avatar__image")

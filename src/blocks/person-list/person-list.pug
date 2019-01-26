@@ -1,0 +1,102 @@
+//- Все примеси в этом файле должны начинаться c имени блока (person-list)
+
+mixin person-list(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +person-list('some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' person-list--' + modsList[i].trim();
+      }
+    }
+
+  .person-list(class=allMods)&attributes(attributes)
+    .person-list__inner
+      block
+
+mixin person-list_group(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +person-list_group('some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' person-list--' + modsList[i].trim();
+      }
+    }
+
+  .person-list__group(class=allMods)&attributes(attributes)
+    block
+
+mixin person-list_note(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +person-list_note('some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' person-list--' + modsList[i].trim();
+      }
+    }
+
+  .person-list__note(class=allMods)&attributes(attributes)
+    block
+
+mixin person-list_list(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +person-list_list('some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' person-list--' + modsList[i].trim();
+      }
+    }
+
+  ul.person-list__list(class=allMods)&attributes(attributes)
+    block
+
+mixin person-list_item(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +person-list_list('some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' person-list--' + modsList[i].trim();
+      }
+    }
+
+  li.person-list__item(class=allMods)&attributes(attributes)
+    block

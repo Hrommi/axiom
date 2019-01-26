@@ -1,0 +1,22 @@
+//- Все примеси в этом файле должны начинаться c имени блока (page-main)
+
+mixin page-main(mods)
+
+  //- Принимает:
+  //-   mods  {string} - список модификаторов
+  //- Вызов:
+        +page-main()
+          p «Контент»
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' page-main--' + modsList[i].trim();
+      }
+    }
+
+  .page-main(class=allMods)&attributes(attributes)
+    .page-main__inner
+      block

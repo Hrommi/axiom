@@ -1,0 +1,64 @@
+//- Все примеси в этом файле должны начинаться c имени блока (person)
+
+mixin person(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +person('some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' person--' + modsList[i].trim();
+      }
+    }
+
+  button.person(class=allMods)&attributes(attributes)
+    .person__inner
+      block
+
+
+mixin person_avatar(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +person-avatar('some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' person--' + modsList[i].trim();
+      }
+    }
+
+  .person__avatar(class=allMods)&attributes(attributes)
+    block
+
+
+mixin person_name(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +person-name('some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' person--' + modsList[i].trim();
+      }
+    }
+
+  .person__name(class=allMods)&attributes(attributes)
+    block

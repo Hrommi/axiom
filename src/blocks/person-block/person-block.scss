@@ -1,0 +1,14 @@
+// В этом файле должны быть стили для БЭМ-блока person-block, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.person-block {
+
+  $block-name:                &; // #{$block-name}__element
+
+  flex-grow: 1;
+  overflow: auto;
+  max-height: calc(100vh - 100px);
+  background-color: $element-bg;
+  box-shadow: $shadow;
+}

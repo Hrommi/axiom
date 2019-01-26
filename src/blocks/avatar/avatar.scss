@@ -1,0 +1,13 @@
+// В этом файле должны быть стили для БЭМ-блока avatar, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.avatar {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__image {
+    display: block;
+    border-radius: 50%;
+  }
+}
