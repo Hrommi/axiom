@@ -12,7 +12,7 @@ block sidebar
     +page-sidebar_header()
       +user-info()
         +user-info_avatar()
-          +avatar('/img/avatar-user.jpg', '/img/avatar-user@2x.jpg')
+          +avatar('img/avatar-user.jpg', 'img/avatar-user@2x.jpg')
         +user-info_name()
           | Kyle Ledbetter
         +user-info_email()
@@ -190,7 +190,7 @@ block content
           - var end;
     +person-block()(class="page-main__item page-main__item--detail")
       +person-detail()
-        .person-detail__header(style="background-image: url(/img/person-image.jpg)")
+        .person-detail__header(style="background-image: url(img/person-image.jpg)")
           +toolbar('transparent')
             +icon-button('opacity')
               svg(width="16", height="16")
