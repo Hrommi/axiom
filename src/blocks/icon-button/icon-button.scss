@@ -17,4 +17,12 @@
   background: transparent;
   color: inherit;
   cursor: pointer;
+
+  &--opacity {
+    opacity: $opacity;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
 }
