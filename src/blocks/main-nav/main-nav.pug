@@ -1,0 +1,148 @@
+//- Все примеси в этом файле должны начинаться c имени блока (main-nav)
+
+mixin main-nav(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +main-nav('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' main-nav--' + modsList[i].trim();
+      }
+    }
+
+  nav.main-nav(class=allMods)&attributes(attributes)
+    .main-nav__inner
+      block
+
+
+mixin main-nav_group(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +main-nav_group('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' main-nav--' + modsList[i].trim();
+      }
+    }
+
+  .main-nav__group(class=allMods)&attributes(attributes)
+    block
+
+
+mixin main-nav_list(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +main-nav_list('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' main-nav--' + modsList[i].trim();
+      }
+    }
+
+  ul.main-nav__list(class=allMods)&attributes(attributes)
+    block
+
+
+mixin main-nav_item(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +main-nav_item('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' main-nav__item--' + modsList[i].trim();
+      }
+    }
+
+  li.main-nav__item(class=allMods)&attributes(attributes)
+    block
+
+
+mixin main-nav_link(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +main-nav_link('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' main-nav--' + modsList[i].trim();
+      }
+    }
+
+  a.main-nav__link(class=allMods)&attributes(attributes)
+    block
+
+
+mixin main-nav_icon(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +main-nav_icon('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' main-nav--' + modsList[i].trim();
+      }
+    }
+
+  .main-nav__icon(class=allMods)&attributes(attributes)
+    block
+
+
+mixin main-nav_text(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +main-nav_text('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' main-nav--' + modsList[i].trim();
+      }
+    }
+
+  .main-nav__text(class=allMods)&attributes(attributes)
+    block

@@ -1,0 +1,25 @@
+// В этом файле должны быть стили для БЭМ-блока user-info, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.user-info {
+
+  $block-name:                &; // #{$block-name}__element
+
+  padding: 28px 16px 14px 22px;
+  background-color: #025395; // Не смог сохранить фоновое изображение
+  color: $text-color--invert;
+
+  &__avatar {
+    width: 64px;
+    margin: 0 0 14px -4px;
+  }
+
+  &__name {
+    font-size: $font-size--normal;
+  }
+
+  &__email {
+    font-size: $font-size--normal;
+  }
+}

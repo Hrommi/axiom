@@ -1,0 +1,85 @@
+//- Все примеси в этом файле должны начинаться c имени блока (user-info)
+
+mixin user-info(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +user-info('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' user-info--' + modsList[i].trim();
+      }
+    }
+
+  .user-info(class=allMods)&attributes(attributes)
+    .user-info__inner
+      block
+
+
+mixin user-info_avatar(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +user-info_avatar('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' user-info--' + modsList[i].trim();
+      }
+    }
+
+  .user-info__avatar(class=allMods)&attributes(attributes)
+    block
+
+
+mixin user-info_name(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +user-info_name('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' user-info--' + modsList[i].trim();
+      }
+    }
+
+  .user-info__name(class=allMods)&attributes(attributes)
+    block
+
+
+mixin user-info_email(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +user-info_email('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' user-info--' + modsList[i].trim();
+      }
+    }
+
+  .user-info__email(class=allMods)&attributes(attributes)
+    block

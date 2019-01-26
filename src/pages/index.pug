@@ -7,6 +7,80 @@ block meta
 //- block append head
 //-   link(rel='stylesheet', href='css/some.css')
 
+block sidebar
+  +page-sidebar()
+    +page-sidebar_header()
+      +user-info()
+        +user-info_avatar()
+          +avatar('/img/avatar-user.jpg', '/img/avatar-user@2x.jpg')
+        +user-info_name()
+          | Kyle Ledbetter
+        +user-info_email()
+          +dropdown()
+            | kyle@kyleledbetter.com
+    +page-sidebar_content()
+      +main-nav()
+        +main-nav_group()
+          +main-nav_list()
+            +main-nav_item('current')
+              +main-nav_link()(href="#")
+                +main-nav_icon()
+                  svg(width="20", height="20")
+                    use(xlink:href="img/sprite.svg#access-time")
+                +main-nav_text()
+                  | Recent Contacts
+            +main-nav_item()
+              +main-nav_link()(href="#")
+                +main-nav_icon()
+                  svg(width="18", height="18")
+                    use(xlink:href="img/sprite.svg#archive")
+                +main-nav_text()
+                  | Archive
+            +main-nav_item()
+              +main-nav_link()(href="#")
+                +main-nav_icon()
+                  svg(width="18", height="13")
+                    use(xlink:href="img/sprite.svg#done")
+                +main-nav_text()
+                  | Replied
+        +main-nav_group()
+          +main-nav_list()
+            +main-nav_item()
+              +main-nav_link()(href="#")
+                +main-nav_icon()
+                  svg(width="21", height="18")
+                    use(xlink:href="img/sprite.svg#send")
+                +main-nav_text()
+                  | Sent
+            +main-nav_item()
+              +main-nav_link()(href="#")
+                +main-nav_icon()
+                  svg(width="14", height="18")
+                    use(xlink:href="img/sprite.svg#delete")
+                +main-nav_text()
+                  | Trash
+            +main-nav_item()
+              +main-nav_link()(href="#")
+                +main-nav_icon()
+                  svg(width="20", height="19")
+                    use(xlink:href="img/sprite.svg#star")
+                +main-nav_text()
+                  | Starred
+            +main-nav_item()
+              +main-nav_link()(href="#")
+                +main-nav_icon()
+                  svg(width="20", height="20")
+                    use(xlink:href="img/sprite.svg#forum")
+                +main-nav_text()
+                  | Forums
+            +main-nav_item()
+              +main-nav_link()(href="#")
+                +main-nav_icon()
+                  svg(width="14", height="16")
+                    use(xlink:href="img/sprite.svg#flag")
+                +main-nav_text()
+                  | Updates
+
 block header
   +page-header()
     +toolbar('header')

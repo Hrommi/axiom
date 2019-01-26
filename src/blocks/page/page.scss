@@ -25,10 +25,22 @@
   min-width: 1000px;
   min-height: 100%;
 
+  &__sidebar {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 256px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
   &__inner {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    padding-left: 256px;
   }
 
   &__content {
