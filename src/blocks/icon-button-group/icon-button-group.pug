@@ -1,0 +1,22 @@
+//- Все примеси в этом файле должны начинаться c имени блока (icon-button-group)
+
+mixin icon-button-group(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +icon-button-group('some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' icon-button-group--' + modsList[i].trim();
+      }
+    }
+
+  .icon-button-group(class=allMods)&attributes(attributes)
+    .icon-button-group__inner
+      block

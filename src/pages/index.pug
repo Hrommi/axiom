@@ -9,7 +9,20 @@ block meta
 
 block header
   +page-header()
-    p «Шапка»
+    +toolbar()
+      +icon-button()
+        svg(width="18", height="12")
+          use(xlink:href="img/sprite.svg#burger")
+      +toolbar-title()
+        | Title
+      +toolbar-spacer()
+      +icon-button-group()
+        +icon-button()(class="icon-button-group__item")
+          svg(width="16", height="16")
+            use(xlink:href="img/sprite.svg#refresh")
+        +icon-button()(class="icon-button-group__item")
+          svg(width="4", height="16")
+            use(xlink:href="img/sprite.svg#more")
 
 block content
   h1 Заголовок

@@ -1,0 +1,61 @@
+//- Все примеси в этом файле должны начинаться c имени блока (toolbar)
+
+mixin toolbar(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +toolbar('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' toolbar--' + modsList[i].trim();
+      }
+    }
+
+  .toolbar(class=allMods)&attributes(attributes)
+    .toolbar__inner
+      block
+
+mixin toolbar-title(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +toolbar('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' toolbar--' + modsList[i].trim();
+      }
+    }
+
+  .toolbar__title(class=allMods)&attributes(attributes)
+    block
+
+mixin toolbar-spacer(mods)
+
+  //- Принимает:
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +toolbar('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' toolbar--' + modsList[i].trim();
+      }
+    }
+
+  .toolbar__spacer(class=allMods)&attributes(attributes)

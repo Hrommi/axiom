@@ -1,0 +1,26 @@
+// В этом файле должны быть стили для БЭМ-блока toolbar, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.toolbar {
+
+  $block-name:                &; // #{$block-name}__element
+
+  padding: 14px 24px 14px 16px;
+  background: $color-main;
+  color: $text-color--invert;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__spacer {
+    flex-grow: 1;
+  }
+
+  &__title {
+    margin: 0 18px;
+    font-size: $font-size--h2;
+  }
+}

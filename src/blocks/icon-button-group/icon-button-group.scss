@@ -1,0 +1,17 @@
+// В этом файле должны быть стили для БЭМ-блока icon-button-group, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.icon-button-group {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 20px;
+  }
+}
