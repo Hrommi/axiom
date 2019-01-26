@@ -5,7 +5,7 @@
     <desc>Created with sketchtool.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.87">
-        <g id="laptop-nav-view" transform="translate(-1016.000000, -107.000000)" fill="#FFFFFF">
+        <g id="laptop-nav-view" transform="translate(-1016.000000, -107.000000)" fill="currentColor">
             <g id="Group" transform="translate(991.000000, 82.000000)">
                 <polygon id="arrow-back" points="41 32 28.8 32 34.4 26.4 33 25 25 33 33 41 34.4 39.6 28.8 34 41 34"></polygon>
             </g>

@@ -18,8 +18,8 @@
 
   &__item {
 
-    &--current #{$block-name}__link,
-    &:hover #{$block-name}__link {
+    &--current #{$block-name}__text,
+    &:hover #{$block-name}__text {
       color: $text-color--hover;
     }
   }
@@ -28,7 +28,6 @@
     display: flex;
     align-items: center;
     padding: 12px 24px;
-    color: $text-color;
     text-decoration: none;
   }
 
@@ -36,6 +35,8 @@
     flex: 0 0 20px;
     max-width: 20px;
     margin-right: 32px;
+    opacity: $opacity;
+    color: $text-color;
 
     svg {
       display: block;
@@ -44,5 +45,6 @@
 
   &__text {
     flex-grow: 1;
+    color: $text-color;
   }
 }

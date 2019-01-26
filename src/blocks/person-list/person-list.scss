@@ -24,6 +24,10 @@
     color: $color-secondary;
     text-align: center;
     cursor: default;
+
+    &--color-main {
+      color: $color-main;
+    }
   }
 
   &__list {

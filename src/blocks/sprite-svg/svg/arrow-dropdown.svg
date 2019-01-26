@@ -5,7 +5,7 @@
     <desc>Created with sketchtool.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.87">
-        <g id="laptop-nav-view" transform="translate(-231.000000, -132.000000)" fill="#FFFFFF">
+        <g id="laptop-nav-view" transform="translate(-231.000000, -132.000000)" fill="currentColor">
             <g id="navigation-drawer">
                 <g id="toolbar">
                     <polygon id="arrow-dropdown" points="231 132 236 137 241 132"></polygon>

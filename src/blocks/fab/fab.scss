@@ -18,6 +18,7 @@
   border-radius: 50%;
   background-color: $color-secondary;
   box-shadow: $shadow;
+  color: $text-color--invert;
   cursor: pointer;
 
   &__inner {
