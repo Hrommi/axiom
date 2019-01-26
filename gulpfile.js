@@ -204,7 +204,6 @@ function compileSass() {
   const fileList = [
     `${dir.src}scss/style.scss`,
   ];
-  if(buildLibrary) fileList.push(`${dir.blocks}blocks-library/blocks-library.scss`);
   return src(fileList, { sourcemaps: true })
     .pipe(plumber({
       errorHandler: function (err) {
@@ -251,7 +250,6 @@ function buildJs() {
   const entryList = {
     'bundle': `./${dir.src}js/entry.js`,
   };
-  if(buildLibrary) entryList['blocks-library'] = `./${dir.blocks}blocks-library/blocks-library.js`;
   return src(`${dir.src}js/entry.js`)
     .pipe(plumber())
     .pipe(webpackStream({
